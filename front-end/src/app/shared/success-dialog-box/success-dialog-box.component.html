@@ -1,0 +1,16 @@
+<div class="success-dialog-component">
+    <div class="header-section">
+        <mat-icon>check_circle</mat-icon>
+        <div class="title">SUCCESS!</div>
+    </div>
+
+    <!--<div class="message">
+    <p>{{ data.message }}</p>
+    </div>-->
+
+    <div class="dialog-content" [innerHTML]="data.message"></div>
+
+    <div class="action">
+        <button mat-raised-button color="accent" class="login-now" (click)="close()">{{ data.buttonText || 'Login Now' }}</button>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+<div class="dashboard-container">
+   
+  <aside class="sidebar">
+    <div class="nav-buttons">
+      <button mat-button [routerLink]="'/dashboard'" routerLinkActive="active">Dashboard</button>
+      <button mat-button [routerLink]="'/create-event'" routerLinkActive="active">Create Event</button>
+      <button mat-button [routerLink]="'/manage-event'" routerLinkActive="active">Manage Event</button>
+      <button mat-button [routerLink]="'/users'" routerLinkActive="active">Users</button>
+      <button mat-button [routerLink]="'/analytics'" routerLinkActive="active">Analytics</button>
+    </div>
+    <div class="sidebar-footer">
+      <button mat-button color="warn" (click)="logout()">
+        <mat-icon>logout</mat-icon> Logout
+      </button>
+    </div>
+  </aside>
+  
+    
+    <main class="main-content">
+      
+      <div class="header-cards">
+        <mat-card class="metric-card total-events">Total Events: {{ metrics.totalEvents }}</mat-card>
+        <mat-card class="metric-card upcoming-events">Upcoming Events: {{ metrics.upcomingEvents }}</mat-card>
+        <mat-card class="metric-card total-users">Total Users: {{ metrics.totalUsers }}</mat-card>
+      </div>
+  
+      
+      <div class="table-container">
+        <h3>Today's Events</h3>
+        <div class="table-scroll">
+          <table mat-table [dataSource]="todaysEvents" class="mat-elevation-z2">
+      
+            <ng-container matColumnDef="title">
+              <th mat-header-cell *matHeaderCellDef class="header-cell">Event Title</th>
+              <td mat-cell *matCellDef="let event">{{ event.title }}</td>
+            </ng-container>
+      
+            <ng-container matColumnDef="startTime">
+              <th mat-header-cell *matHeaderCellDef class="header-cell">Start Time</th>
+              <td mat-cell *matCellDef="let event">{{ event.startDt | date: 'shortTime' }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="endTime">
+              <th mat-header-cell *matHeaderCellDef class="header-cell">End Time</th>
+              <td mat-cell *matCellDef="let event">{{ event.endDt | date: 'shortTime' }}</td>
+            </ng-container>
+      
+            <ng-container matColumnDef="location">
+              <th mat-header-cell *matHeaderCellDef class="header-cell">Location</th>
+              <td mat-cell *matCellDef="let event">{{ event.location }}</td>
+            </ng-container>
+      
+            <ng-container matColumnDef="actions">
+              <th mat-header-cell *matHeaderCellDef></th>
+              <td mat-cell *matCellDef="let event">
+                <button mat-icon-button color="primary" (click)="openEditPopup(event)">
+                  <mat-icon>edit</mat-icon>
+                </button>
+              </td>
+            </ng-container>
+      
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </div>
+      </div>
+      <br/>
+      <div class="weather-card">
+        <h3>Current Weather</h3>
+        <div class="weather-content">
+          <img [src]="weather.icon" alt="Weather Icon" width="80">
+          <div class="weather-details">
+            <p><strong>{{ weather.city }}</strong></p>
+            <p>{{ weather.temp }}°C</p>
+            <p>{{ weather.condition }}</p>
+          </div>
+        </div>
+      </div>
+      <footer class="dashboard-footer">
+        <p>© {{ currentYear }} <strong>EvePilot</strong>. All rights reserved. | Crafted with ❤️ for seamless event management.</p>
+      </footer>
+    </main>
+  </div>
+
+  

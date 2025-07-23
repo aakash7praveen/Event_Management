@@ -1,0 +1,112 @@
+.login-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #f3f4f6, #e0f7fa);
+    padding: 1rem;
+
+}
+
+.header-region {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+.login-component {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 16px;
+    background: #f4f4f4;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.login-content-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+.form-box {
+    background-color: #ffffff; 
+    border-radius: 12px; 
+    padding: 2rem; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px;
+  }
+
+.image-style {
+    flex: 1 1 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-style img{
+    max-width: 100%;
+    height: auto;
+    box-shadow: none;           
+    border: none;            
+    border-radius: 0;         
+    background: transparent;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #00796b;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem 0 0;
+    color: #333;
+}
+
+.full-wide {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.signup-link {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+
+    a{
+        text-decoration: none;
+        font-weight: bold;
+        color: #00796b;
+        &:hover{
+        text-decoration: underline;
+        }
+    }
+}
+
+button.signin-button {
+    background-color: #28a745; // Green
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    width: 30%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #218838; 
+    }
+  
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.3); 
+    }
+  }

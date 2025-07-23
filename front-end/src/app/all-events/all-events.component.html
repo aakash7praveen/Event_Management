@@ -1,0 +1,66 @@
+<div class="events-container">
+<div class="header-bar">
+  <button mat-button color="primary" [routerLink]="'/dashboard'">
+    <mat-icon>arrow_back</mat-icon>
+    Back
+  </button>
+  <h2 class="page-title">Events List</h2>
+</div>
+
+<div class="search-bar-wrapper">
+<div class="search-bar">
+  <mat-form-field appearance="outline" class="search-input">
+    <mat-icon matPrefix>search</mat-icon>
+    <input matInput placeholder="Event Title Search" [(ngModel)]="searchText">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="venue-filter">
+    <mat-select [(ngModel)]="selectedVenue" placeholder="Venue">
+      <mat-option value="">All Venues</mat-option>
+      <mat-option *ngFor="let venue of venues" [value]="venue">{{ venue }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="date-filter">
+    <input matInput [matDatepicker]="picker" placeholder="Date" [(ngModel)]="selectedDate">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+ </div> 
+  <table class="event-table">
+    <thead>
+      <tr>
+        <th class="header">Event Name</th>
+        <th class="header">Date</th>
+        <th class="header">Venue</th>
+        <th class="header">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let event of pagedEvents">
+        <td>{{ event.title }}</td>
+        <td>{{ event.startDt | date: 'MMM dd, yyyy' }}</td>
+        <td>{{ event.location }}</td>
+        <td>
+          <button mat-icon-button (click)="openEditPopup(event)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="confirmCancel(event)" style="margin-left: 20px;">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pagination-controls" *ngIf="filteredEvents.length > 0">
+    <button mat-button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button mat-button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+  </div>
+  <div class="no-events" *ngIf="filteredEvents.length === 0">
+    <p>No events found.</p>
+  </div>
+</div>
+  

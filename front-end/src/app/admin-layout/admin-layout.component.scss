@@ -1,0 +1,33 @@
+.layout-container {
+  display: flex;           
+  height: 100vh;
+  width: 100%;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #0a3d62;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.sidebar button {
+  display: block;          
+  width: 100%;
+  color: white;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.active-link {
+  background-color: #1e90ff;
+}
+
+.main-content {
+  flex: 1;                 
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #f5f6fa;
+}

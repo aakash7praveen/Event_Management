@@ -1,0 +1,60 @@
+<div class="analytics-layout">
+  <div class="chart-box">
+    <h3>📊 Events by Category</h3>
+    <ngx-charts-bar-vertical
+      [view]="[600, 315]"
+      [scheme]="colorScheme"
+      [results]="categoryData"
+      [xAxis]="true"
+      [yAxis]="true"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Category'"
+      [yAxisLabel]="'Count'">
+    </ngx-charts-bar-vertical>
+  </div>
+
+  <div class="chart-box">
+    <h3>📅 Events Per Day</h3>
+    <ngx-charts-line-chart
+      [view]="[600, 315]"
+      [scheme]="colorScheme"
+      [results]="[{ name: 'Daily Events', series: dailyData }]"
+      [xAxis]="true"
+      [yAxis]="true"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Date'"
+      [yAxisLabel]="'Events'">
+    </ngx-charts-line-chart>
+  </div>
+
+  <div class="dashboard-title" colspan="2">Analytics Dashboard</div>
+
+  <div class="chart-box">
+    <h3>🏛️ Top Venues</h3>
+    <ngx-charts-pie-chart
+      [view]="[600, 315]"
+      [scheme]="colorScheme"
+      [results]="venueData"
+      [legend]="true"
+      [labels]="true"
+      [doughnut]="false">
+    </ngx-charts-pie-chart>
+  </div>
+
+  <div class="chart-box">
+    <h3>🙋 RSVP Counts by Event</h3>
+    <ngx-charts-bar-vertical
+      [view]="[600, 315]"
+      [scheme]="colorScheme"
+      [results]="rsvpData"
+      [xAxis]="true"
+      [yAxis]="true"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Event'"
+      [yAxisLabel]="'RSVPs'">
+    </ngx-charts-bar-vertical>
+  </div>
+</div>

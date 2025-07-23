@@ -1,0 +1,14 @@
+<div class="error-dialog-component">
+    <div class="header-section">
+      <mat-icon>error</mat-icon>
+      <div class="title">ERROR!</div>
+    </div>
+  
+    <div class="message" [innerHTML]="data.message">
+    </div>
+  
+    <div class="actions">
+      <button mat-raised-button color="warn" class="close-now" (click)="close()">Close</button>
+    </div>
+  </div>
+  

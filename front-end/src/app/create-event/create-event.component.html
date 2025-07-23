@@ -1,0 +1,80 @@
+<button mat-stroked-button color="primary" class="back-button" [routerLink]="'/dashboard'">
+    <mat-icon>arrow_back</mat-icon>
+    Back
+</button>
+<div class="page-container">
+    <div class="form-wrapper">
+        <h2 class="title">Create New Event</h2>
+        <form [formGroup]="eventForm" class="event-form">
+        <mat-form-field appearance="fill">
+            <mat-label>Event Title </mat-label>
+            <input matInput formControlName="title" />
+            <mat-error *ngIf="eventForm.get('title')?.hasError('required')">
+                Title is required
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Event Description</mat-label>
+            <textarea matInput formControlName="description"></textarea>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Start Date & Time</mat-label>
+            <input matInput type="datetime-local" formControlName="startTime">
+            <mat-error *ngIf="eventForm.get('startTime')?.hasError('required')">
+                Start time is required
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>End Date & Time</mat-label>
+            <input matInput type="datetime-local" formControlName="endTime">
+            <mat-error *ngIf="eventForm.get('endTime')?.hasError('required')">
+                End time is required
+            </mat-error>
+            <mat-error *ngIf="eventForm.hasError('endBeforeStart')">
+                End time must be after start time
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Venue</mat-label>
+            <input matInput formControlName="venue" />
+            <mat-error *ngIf="eventForm.get('venue')?.hasError('required')">
+                Venue is required
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Category</mat-label>
+            <mat-select formControlName="category">
+            <mat-option value="onsite">Onsite</mat-option>
+            <mat-option value="virtual">Virtual</mat-option>
+            </mat-select>
+            <mat-error *ngIf="eventForm.get('category')?.hasError('required')">
+                Category is required
+            </mat-error>
+        </mat-form-field>
+
+        <div class="attendees-container">
+            <label>Max Attendees</label>
+            <div class="attendee-controls">
+            <button mat-icon-button type="button" (click)="decreaseAttendees()">
+                <mat-icon>remove</mat-icon>
+            </button>
+            <input type="number" [value]="eventForm.value.maxAttendees" readonly />
+            <button mat-icon-button type="button" (click)="increaseAttendees()">
+                <mat-icon>add</mat-icon>
+            </button>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button mat-button type="button" color="warn" [routerLink]="'/dashboard'" (click)="cancel()">Cancel</button>
+            <button mat-raised-button color="primary" type="submit" (click)="saveEvent()">Create</button>
+        </div>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,97 @@
+<div class="signup-component">
+    <mat-card class="signup-card">
+        <h2 class="title">First Step to EASY Management</h2>
+        <h3 class="subtitle">Sign Up to EvePilot</h3>
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+
+            <div class="file-upload-wrapper">
+                <button mat-raised-button color="primary" (click)="fileInput.click()" class="upload-btn">
+                    <mat-icon>upload</mat-icon>
+                    Upload Profile Picture
+                </button>
+
+                <span class="file-name" *ngIf="selectedFileName">{{ selectedFileName }}</span>
+
+                <input
+                    type="file"
+                    #fileInput
+                    accept="image/*"
+                    style="display: none"
+                    (change)="onFileSelected($event)"
+                />
+            </div>
+
+            <mat-form-field appearance="outline" class="full-wide">
+                <mat-icon matPrefix>person</mat-icon>
+                <mat-label>First Name</mat-label>
+                <input matInput formControlName="firstName">
+                <mat-error *ngIf="signupForm.get('firstName')?.hasError('required')">
+                    First name is required!
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full-wide">
+                <mat-icon matPrefix>person</mat-icon>
+                <mat-label>Middle Name</mat-label>
+                <input matInput formControlName="middleName">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full-wide">
+                <mat-icon matPrefix>person</mat-icon>
+                <mat-label>Last Name</mat-label>
+                <input matInput formControlName="lastName">
+                <mat-error *ngIf="signupForm.get('lastName')?.hasError('required')">
+                    Last Name is Required!
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full-wide">
+                <mat-icon matPrefix>email</mat-icon>
+                <mat-label>E-mail</mat-label>
+                <input type="email" matInput formControlName="email">
+                <mat-error *ngIf="signupForm.get('email')?.hasError('required')">
+                    E-mail is required!
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full-wide">
+                <mat-icon matPrefix>phone</mat-icon>
+                <mat-label>Phone Number</mat-label>
+                <input type="tel" matInput formControlName="phoneNumber" maxlength="10">
+                <mat-error *ngIf="signupForm.get('phoneNumber')?.hasError('pattern')">
+                    Phone number must be exactly 10 digits.
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full-wide">
+                <mat-icon matPrefix>password</mat-icon>
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password">
+                <mat-error *ngIf="signupForm.get('password')?.hasError('required')">
+                    Password is required!
+                </mat-error>
+                <mat-error *ngIf="signupForm.get('password')?.hasError('minlength')">
+                    Password must be atleast 8 Characters long!
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full-wide">
+                <mat-icon matPrefix>password</mat-icon>
+                <mat-label>Confirm Password</mat-label>
+                <input type="password" matInput formControlName="confirmPassword">
+                <mat-error *ngIf="signupForm.get('confirmPassword')?.hasError('required')">
+                    Confirm Password is required!
+                </mat-error>
+                <mat-error *ngIf="signupForm.hasError('passwordMismatch') && signupForm.get('confirmPassword')?.dirty">
+                    Passwords do NOT Match!
+                </mat-error>
+                
+            </mat-form-field>
+
+            <button mat-raised-button color="accent" class="signup-style" type="submit"
+            [disabled]="signupForm.invalid || (selectedFileName && !uploadedFilePath)">
+            Sign Up
+            </button>
+        </form>
+    </mat-card>
+</div>

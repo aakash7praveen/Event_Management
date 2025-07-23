@@ -1,0 +1,92 @@
+<div class="main-content">
+<div class="top-bar">
+  <div class="menu-button">
+    <button mat-icon-button [matMenuTriggerFor]="userMenu">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <mat-menu #userMenu="matMenu">
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </div>
+  <div class="toggle-wrapper">
+    <mat-button-toggle-group appearance="legacy" [(value)]="activeTab" (change)="loadEventsByTab($event.value)">
+      <mat-button-toggle value="upcoming">Upcoming</mat-button-toggle>
+      <mat-button-toggle value="accepted">Accepted</mat-button-toggle>
+      <mat-button-toggle value="past">Past</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
+  <div class="user-profile">
+    <span class="user-name">{{ currentUser.firstName }}</span>
+    <img class="profile-picture" [src]="profilePictureUrl" alt="Profile Picture" />
+  </div>
+</div>
+  <div class="filters">
+    <mat-form-field class="search-input" appearance="outline">
+      <mat-label>Event Title Search</mat-label>
+      <input matInput [(ngModel)]="filters.title" (ngModelChange)="onFilterChange()" placeholder="Search by title" />
+    </mat-form-field>
+  
+    <mat-form-field class="venue-filter" appearance="outline">
+      <mat-label>Venue</mat-label>
+      <mat-select [(ngModel)]="filters.venue" (selectionChange)="onFilterChange()" placeholder="Venue">
+        <mat-option value="">All Venues</mat-option>
+        <mat-option *ngFor="let v of venues" [value]="v">{{ v }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field class="date-filter" appearance="outline">
+      <mat-label>Date</mat-label>
+      <input matInput [matDatepicker]="picker" (dateChange)="onFilterChange()" [(ngModel)]="filters.date" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  
+  <div class="event-card-container">
+    <div class="event-card" *ngFor="let event of filteredEvents">
+      <h3 class="event-title">{{ event.title }}</h3>
+      <p class="event-description">{{ event.description }}</p>
+  
+      <div class="event-detail">
+        <mat-icon>calendar_today</mat-icon>
+        {{ event.startDt | date: 'MMM dd, yyyy' }}
+      </div>
+      <div class="event-detail">
+        <mat-icon>schedule</mat-icon>
+        {{ event.startDt | date: 'shortTime' }} - {{ event.endDt | date: 'shortTime' }}
+      </div>
+      <div class="event-detail">
+        <mat-icon>location_on</mat-icon>
+        {{ event.location }}
+      </div>
+  
+      <ng-container [ngSwitch]="activeTab">
+        <button *ngSwitchCase="'upcoming'"
+                mat-raised-button
+                color="primary"
+                (click)="rsvpAndAcceptEvent(event)">
+          Accept
+        </button>
+
+        <span *ngSwitchCase="'accepted'" class="accepted-label">
+          Accepted
+        </span>
+
+        <span *ngSwitchCase="'past'" class="past-label">
+          Event Over
+        </span>
+      </ng-container>
+  </div>
+</div>
+</div>
+<footer class="user-footer">
+  <p>© {{ currentYear }} <strong>EvePilot</strong>. All rights reserved. | Crafted with ❤️ for seamless event management.</p>
+</footer>
+  
+
+  

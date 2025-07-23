@@ -1,0 +1,120 @@
+<div class="popup-container">
+  <div class="header">
+    <h2 class="title-colored">{{ event.title }}</h2>
+    <button mat-icon-button (click)="closePopup()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <div class="description-container">
+    <div *ngIf="!isEditingDescription">
+      <p class="description-text">{{ event.description }}</p>
+      <button mat-icon-button (click)="toggleDescriptionEdit()">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+    <div *ngIf="isEditingDescription" class="edit-description">
+      <textarea [(ngModel)]="event.description" rows="4"></textarea>
+      <button mat-icon-button (click)="toggleDescriptionEdit()">
+        <mat-icon>check</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="event-info-row">
+    <div class="event-info">
+      <div class="info-item">
+      <mat-icon>calendar_today</mat-icon>
+      <ng-container *ngIf="!isEditingDateTime">
+        {{ event.date }} {{ event.time }}
+        <button mat-icon-button (click)="toggleEdit('datetime')">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </ng-container>
+      <ng-container *ngIf="isEditingDateTime">
+        <input [(ngModel)]="event.date" type="date" (change)="onDateOrTimeChanged()" />
+        <input [(ngModel)]="event.time" type="time" (change)="onDateOrTimeChanged()" />
+        <button mat-icon-button (click)="toggleEdit('datetime')">
+          <mat-icon>check</mat-icon>
+        </button>
+      </ng-container>
+    </div>
+
+    <div class="info-item">
+      <mat-icon>schedule</mat-icon>
+      <ng-container *ngIf="!isEditingDuration">
+        {{ formatDuration(event.durationMinutes) }}
+        <button mat-icon-button (click)="toggleEdit('duration')">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </ng-container>
+
+      <ng-container *ngIf="isEditingDuration">
+        <input type="number" [(ngModel)]="event.durationMinutes" min="1" 
+        (ngModelChange)="onDurationChanged(); durationEdited = true"
+        placeholder="Duration (minutes)" />
+        <button mat-icon-button (click)="toggleEdit('duration')">
+          <mat-icon>check</mat-icon>
+        </button>
+      </ng-container>
+    </div>
+
+    <div class="info-item">
+      <mat-icon>place</mat-icon>
+      <ng-container *ngIf="!isEditingLocation">
+        {{ event.location }}
+        <button mat-icon-button (click)="toggleEdit('location')">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </ng-container>
+      <ng-container *ngIf="isEditingLocation">
+        <input [(ngModel)]="event.location" />
+        <button mat-icon-button (click)="toggleEdit('location')">
+          <mat-icon>check</mat-icon>
+        </button>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+  <table class="attendees-table">
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of paginatedAttendees; trackBy: trackByAttendeeId" [@fadeOut]>
+        <td>{{ user.user_Id }}</td>
+        <td>{{ user.first_Name }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+          <button mat-icon-button color="warn" (click)="removeAttendee(user.user_Id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pagination-controls">
+    <button (click)="goToPreviousPage()" [disabled]="currentPage === 1">«</button>
+
+    <button *ngFor="let page of totalPagesArray"
+            (click)="goToPage(page)"
+            [class.active]="page === currentPage">
+      {{ page }}
+    </button>
+
+    <button (click)="goToNextPage()" [disabled]="currentPage === totalPages">»</button>
+  </div>
+
+  <div class="sticky-actions">
+    <div class="popup-actions">
+      <button mat-stroked-button color="warn" (click)="onCancel()">Cancel</button>
+      <button mat-flat-button color="primary" (click)="onUpdate()">Update</button>
+    </div>
+  </div>
+</div>

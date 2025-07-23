@@ -1,0 +1,65 @@
+.error-dialog-component {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+    max-width: 350px;
+  }
+  
+  .header-section {
+    background-color: #e74c3c; // red error background
+    border-radius: 8px 8px 0 0;
+    padding: 1.5rem 1rem 1rem 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    mat-icon {
+      font-size: 48px;
+      height: 48px;
+      width: 48px;
+      line-height: 48px;
+    }
+  
+    .title {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
+  
+  .message {
+    padding: 1rem;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .actions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  
+    button.close-now {
+      background-color: #c0392b; 
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      width: 100%;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #a93226;
+      }
+  
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(192, 57, 43, 0.3);
+      }
+    }
+  }
+  

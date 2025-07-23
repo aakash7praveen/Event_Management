@@ -1,0 +1,46 @@
+<div class="login-wrap">
+    <mat-card class="login-component">
+
+    <div class="header-region">
+        <h1 class="title"> EvePilot</h1>
+        <h2 class="subtitle">The Event Manager</h2>
+    </div>
+        <div class="login-content-row">
+
+                <div class="form-box">
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                        
+                        <mat-form-field appearance="fill" class="full-wide">
+                            <mat-icon matPrefix>email</mat-icon>
+                            <mat-label>E-mail</mat-label>
+                            <input type="email" matInput formControlName="email">
+                            <mat-error *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.errors?.['required']">
+                                E-mail is required!
+                            </mat-error>
+                        </mat-form-field>
+
+                        
+                        <mat-form-field appearance="fill" class="full-wide">
+                            <mat-icon matPrefix>password</mat-icon>
+                            <mat-label>Password</mat-label>
+                            <input type="password" matInput formControlName="password">
+                            <mat-error *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['required']">
+                                Password is required
+                            </mat-error>
+                        </mat-form-field>
+
+
+                        <button mat-raised-button color="accent" class="signin-button" type="submit" [disabled]="isLoading">
+                        <mat-spinner *ngIf="isLoading" diameter="20"></mat-spinner>
+                        <span *ngIf="!isLoading">Sign In</span>
+                        </button>
+                    </form>
+                    <p class="signup-link">Are you new around here? <a routerLink="/signup">Sign Up Here</a></p>
+                </div>
+
+            <div class="image-style">
+                <img [src]="content.url" alt="Illustration" width="300">
+            </div>
+        </div>
+    </mat-card>
+</div>

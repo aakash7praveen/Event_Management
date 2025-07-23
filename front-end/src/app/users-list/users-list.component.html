@@ -1,0 +1,73 @@
+<div class="users-list-page">
+  <div class="header-bar">
+    <button mat-button color="primary" [routerLink]="'/dashboard'">
+      <mat-icon>arrow_back</mat-icon>
+      Back
+    </button>
+    <h2 class="page-title">Users List</h2>
+  </div>
+
+  <hr class="divider" />
+  <br/>
+
+  
+  <mat-form-field class="search-bar" appearance="outline">
+    <mat-label>Client Search</mat-label>
+    <input matInput [(ngModel)]="searchTerm" placeholder="Search by name" />
+  </mat-form-field>
+
+  <hr class="divider" />
+
+  <table class="user-table">
+    <thead>
+      <tr class="table-header">
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let user of paginatedUsers">
+        <tr>
+          <td><strong>{{ user.name }}</strong></td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.phone }}</td>
+          <td>
+            <button mat-icon-button class="dropdown" (click)="toggleExpand(user)">
+              <mat-icon>{{ user.expanded ? 'expand_less' : 'expand_more' }}</mat-icon>
+            </button>
+          </td>
+        </tr>
+        <tr *ngIf="user.expanded" class="expanded-row">
+          <td colspan="4">
+            <div class="event-container">
+              <mat-card
+                class="event-card"
+                *ngFor="let event of user.events; trackBy: trackByEventId"
+                [@fadeOut]>
+                <div class="event-details">
+                  <div><strong>{{ event.title }}</strong></div>
+                  <div><small>{{ event.startDt | date: 'short' }}</small></div>
+                </div>
+                <button mat-icon-button color="warn" (click)="deleteEvent(user, event.id)">
+                  <mat-icon>remove_circle</mat-icon>
+                </button>
+              </mat-card>
+              <div
+                class="no-events"
+                *ngIf="!user.events || user.events.length === 0">
+                No events
+              </div>
+            </div>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+  <div class="pagination-controls">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+  </div>
+</div>

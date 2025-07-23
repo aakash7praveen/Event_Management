@@ -1,0 +1,78 @@
+.success-dialog-component {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+    max-width: 350px;
+  }
+  
+  .header-section {
+    background-color: #7cc674;
+    border-radius: 8px 8px 0 0;
+    padding: 1.5rem 1rem 1rem 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    mat-icon {
+      font-size: 48px;
+      height: 48px;
+        width: 48px;
+        line-height: 48px;
+    }
+  
+    .title {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
+
+  .dialog-content {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 20px;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+  
+    strong {
+      color: #1e88e5;
+    }
+  }
+  
+  
+  .message {
+    padding: 1rem;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .actions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  
+    button.login-now {
+        background-color: #28a745; 
+        color: white;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 5px;
+        width: 100%;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    
+      
+        &:hover {
+          background-color: #218838; 
+        }
+      
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.3); 
+        }
+      }
+  }
