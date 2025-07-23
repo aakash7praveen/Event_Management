@@ -1,0 +1,50 @@
+using EventManagementAPI.Models;
+using EventManagementAPI.Helpers;
+using EventManagementAPI.Repositories;
+using EventManagementAPI.Repositories.Interfaces;
+
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors(options =>
+
+{
+
+    options.AddPolicy("AllowAll", policy =>
+
+    {
+
+        policy.AllowAnyOrigin()
+
+              .AllowAnyHeader()
+
+              .AllowAnyMethod();
+
+    });
+
+});
+
+
+builder.Services.AddControllers();
+
+builder.Services.AddSingleton<DbHelper>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+builder.Services.AddSingleton<DbHelper>();
+builder.Services.AddScoped<IEventRepository, EventRepository>();
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+app.UseCors("AllowAll");
+app.UseStaticFiles();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+app.UseAuthorization();
+app.MapControllers();
+app.Run();
