@@ -1,5 +1,6 @@
-using EventManagementAPI.Models;
+using EventManagementAPI;
 using EventManagementAPI.Helpers;
+using EventManagementAPI.Models;
 using EventManagementAPI.Repositories;
 using EventManagementAPI.Repositories.Interfaces;
 
@@ -33,6 +34,10 @@ builder.Services.AddScoped<IEventRepository, EventRepository>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddAutoMapper(typeof(MappingProfile)); 
+// OR:
+//builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); 
 
 var app = builder.Build();
 app.UseCors("AllowAll");

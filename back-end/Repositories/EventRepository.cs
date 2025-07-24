@@ -18,6 +18,8 @@ namespace EventManagementAPI.Repositories
 
         public async Task<int> CreateEventAsync(CreateEventRequest request)
         {
+            // create dto and map 
+            // return the id of the newly created event
             var sql = @"INSERT INTO [event] (title, description, start_dt, end_dt, location, category, created_by, max_attendees, delete_ind)
                         VALUES (@Title, @Description, @StartDateTime, @EndDateTime, @Location, @Category, @CreatedBy, @MaxAttendees, 0)";
             return await _db.ExecuteAsync(sql, request);
@@ -87,7 +89,7 @@ namespace EventManagementAPI.Repositories
             return await _db.QuerySingleAsync<Event>(sql, new { Id = id });
         }
 
-        public async Task<bool> RsvpToEventAsync(RsvpRequest request)
+        public async Task<bool> RSVPToEventAsync(RsvpRequest request)
         {
             var sql = @"INSERT INTO rsvp (user_id, event_id, status) VALUES (@UserId, @EventId, @Status)";
             var result = await _db.ExecuteAsync(sql, request);

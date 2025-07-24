@@ -11,7 +11,7 @@ namespace EventManagementAPI.Repositories.Interfaces
         Task<int> CancelEventAsync(int eventId);
         Task<Event?> GetEventByIdAsync(int id);
         Task<IEnumerable<Event>> GetTodaysEventsAsync();
-        Task<bool> RsvpToEventAsync(RsvpRequest request);
+        Task<bool> RSVPToEventAsync(RsvpRequest request);
         Task<bool> RemoveRsvpAsync(int userId, int eventId);
         Task<AdminDashboardMetrics> GetAdminMetricsAsync();
         Task<IEnumerable<SystemUser>> GetUsersByEventAsync(int eventId);

@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EventManagementAPI.Dtos.Requests;
 using EventManagementAPI.Models;
-using EventManagementAPI.Repositories;
-using EventManagementAPI.Models.Requests;
-using EventManagementAPI.Repositories.Interfaces;
 using EventManagementAPI.Models.Analytics;
+using EventManagementAPI.Models.Requests;
+using EventManagementAPI.Repositories;
+using EventManagementAPI.Repositories.Interfaces;
+using Microsoft.AspNetCore.Mvc;
+using EventManagementAPI.Services;
 
 namespace EventManagementAPI.Controllers
 {
@@ -11,69 +13,53 @@ namespace EventManagementAPI.Controllers
     [Route("api/[controller]")]
     public class EventsController : ControllerBase
     {
-        private readonly IEventRepository _eventRepo;
+        private readonly IEventService _eventService;
 
-        public EventsController(IEventRepository eventRepo)
+        public EventsController(IEventService eventService)
         {
-            _eventRepo = eventRepo;
+            _eventService = eventService;
         }
 
         [HttpPost("create")]
-        public async Task<IActionResult> CreateEvent([FromBody] CreateEventRequest request)
+        public async Task<IActionResult> CreateEvent([FromBody] CreateEventRequestDto createEventRequestDto)
         {
-            var result = await _eventRepo.CreateEventAsync(request);
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            if (result > 0)
-            {
-                return Ok(new
-                {
-                    success = true,
-                    message = "Event created successfully."
-                });
-            }
-
-            return StatusCode(500, new
-            {
-                success = false,
-                message = "Failed to create event."
-            });
+            var eventId = await _eventService.CreateEvent(createEventRequestDto);
+            return CreatedAtAction(nameof(GetEventById), new { id = eventId }, new { id = eventId });
         }
 
-        [HttpGet("list")]
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetEventById(int id)
+        {
+            var result = await _eventService.GetEventById(id);
+            return result == null ? NotFound() : Ok(result);
+        }
+
+        [HttpGet]
         public async Task<IActionResult> GetAllEvents()
         {
-            var events = await _eventRepo.GetAllEventsAsync();
+            var events = await _eventService.GetAllEvents();
             return Ok(events);
         }
 
         [HttpDelete("{eventId}/cancel")]
         public async Task<IActionResult> CancelEvent(int eventId)
         {
-            var result = await _eventRepo.CancelEventAsync(eventId);
-            if (result > 0)
-                return Ok(new { success = true, message = "Event cancelled successfully." });
-
-            return StatusCode(500, new { success = false, message = "Failed to cancel event." });
+            var success = await _eventService.CancelEvent(eventId);
+            return success
+                ? Ok(new { success = true, message = "Event cancelled successfully." })
+                : StatusCode(500, new { success = false, message = "Failed to cancel event." });
         }
 
         [HttpGet("todays-events")]
-        public async Task<IActionResult> GetTodaysEvents()
-        {
-            var events = await _eventRepo.GetTodaysEventsAsync();
-            return Ok(events);
-        }
-
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetEventById(int id)
-        {
-            var evt = await _eventRepo.GetEventByIdAsync(id);
-            return evt != null ? Ok(evt) : NotFound("Event not found.");
-        }
+        public async Task<IActionResult> GetTodaysEvents() =>
+            Ok(await _eventService.GetTodaysEvents());
 
         [HttpPost("rsvp")]
-        public async Task<IActionResult> RSVPToEvent([FromBody] RsvpRequest request)
+        public async Task<IActionResult> RSVPToEvent([FromBody] RsvpRequestDto request)
         {
-            var response = await _eventRepo.RsvpToEventAsync(request);
+            var response = await _eventService.RSVPToEvent(request);
             return response
                 ? Ok(new { message = "RSVP successful" })
                 : BadRequest(new { message = "Failed to RSVP." });
@@ -83,96 +69,49 @@ namespace EventManagementAPI.Controllers
         public async Task<IActionResult> RemoveRsvp([FromQuery] int userId, [FromQuery] int eventId)
         {
             if (userId <= 0 || eventId <= 0)
-            {
-                return BadRequest(new
-                {
-                    message = "Invalid userId or eventId.",
-                    userId,
-                    eventId
-                });
-            }
+                return BadRequest(new { message = "Invalid userId or eventId." });
 
-            var success = await _eventRepo.RemoveRsvpAsync(userId, eventId);
-
-            if (success)
-            {
-                return Ok(new
-                {
-                    message = "RSVP removed successfully.",
-                    userId,
-                    eventId
-                });
-            }
-
-            return NotFound(new
-            {
-                message = "RSVP not found or already removed.",
-                userId,
-                eventId
-            });
+            var success = await _eventService.RemoveRsvp(userId, eventId);
+            return success
+                ? Ok(new { message = "RSVP removed successfully.", userId, eventId })
+                : NotFound(new { message = "RSVP not found or already removed.", userId, eventId });
         }
-
 
         [HttpGet("admin/metrics")]
-        public async Task<IActionResult> GetAdminMetrics()
-        {
-            var metrics = await _eventRepo.GetAdminMetricsAsync();
-            return Ok(metrics);
-        }
+        public async Task<IActionResult> GetAdminMetrics() =>
+            Ok(await _eventService.GetAdminMetrics());
 
         [HttpGet("{id}/attendees")]
-        public async Task<IActionResult> GetUsersByEvent(int id)
-        {
-            var users = await _eventRepo.GetUsersByEventAsync(id);
-            return Ok(users);
-        }
+        public async Task<IActionResult> GetUsersByEvent(int id) =>
+            Ok(await _eventService.GetUsersByEvent(id));
 
         [HttpPut("update")]
-        public async Task<IActionResult> UpdateEvent([FromBody] UpdateEventRequest request)
+        public async Task<IActionResult> UpdateEvent([FromBody] UpdateEventRequestDto request)
         {
-            var success = await _eventRepo.UpdateEventAsync(request);
-
-            if (success)
-            {
-                return Ok(new
-                {
-                    success = true,
-                    message = "Event updated successfully"
-                });
-            }
-            else
-            {
-                return BadRequest(new
-                {
-                    success = false,
-                    message = "Failed to update the event"
-                });
-            }
+            var success = await _eventService.UpdateEvent(request);
+            return success
+                ? Ok(new { success = true, message = "Event updated successfully" })
+                : BadRequest(new { success = false, message = "Failed to update the event" });
         }
-
 
         [HttpGet("has-rsvped")]
-        public async Task<IActionResult> HasUserRsvped([FromQuery] int userId, [FromQuery] int eventId)
-        {
-            var hasRsvped = await _eventRepo.HasUserRsvpedAsync(userId, eventId);
-            return Ok(hasRsvped);
-        }
+        public async Task<IActionResult> HasUserRsvped([FromQuery] int userId, [FromQuery] int eventId) =>
+            Ok(await _eventService.HasUserRsvped(userId, eventId));
 
         [HttpGet("analytics/category-count")]
         public async Task<IActionResult> GetEventCountByCategory() =>
-            Ok(await _eventRepo.GetEventCountByCategoryAsync());
+            Ok(await _eventService.GetEventCountByCategory());
 
         [HttpGet("analytics/daily-count")]
         public async Task<IActionResult> GetDailyEventCount() =>
-            Ok(await _eventRepo.GetEventCountPerDayAsync());
+            Ok(await _eventService.GetEventCountPerDay());
 
         [HttpGet("analytics/top-venues")]
         public async Task<IActionResult> GetTopVenues() =>
-            Ok(await _eventRepo.GetTopVenuesAsync());
+            Ok(await _eventService.GetTopVenues());
 
         [HttpGet("analytics/rsvp-counts")]
         public async Task<IActionResult> GetRsvpCounts() =>
-            Ok(await _eventRepo.GetRsvpCountPerEventAsync());
-
+            Ok(await _eventService.GetRsvpCountPerEvent());
     }
 }

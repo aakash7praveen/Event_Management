@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EventManagementAPI.Dtos.Requests;
+using EventManagementAPI.Dtos.Responses;
+using EventManagementAPI.DTOs;
 using EventManagementAPI.Models.Requests;
-using EventManagementAPI.Repositories.Interfaces;
-using EventManagementAPI.Models;
-using EventManagementAPI.Repositories;
+using EventManagementAPI.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace EventManagementAPI.Controllers
 {
@@ -10,49 +11,55 @@ namespace EventManagementAPI.Controllers
     [Route("api/[controller]")]
     public class UsersController : ControllerBase
     {
-        private readonly IUserRepository _userRepo;
+        private readonly IUserService _userService;
 
-        public UsersController(IUserRepository userRepo)
+        public UsersController(IUserService userService)
         {
-            _userRepo = userRepo;
+            _userService = userService;
         }
 
         [HttpPost("signup")]
-        public async Task<IActionResult> Signup([FromBody] SignupRequest req)
+        public async Task<IActionResult> Signup([FromBody] SignupRequestDto req)
         {
-            if (req.Password != req.ConfirmPassword)
-                return BadRequest(new { message = "Passwords do not match" });
-
-            if (await _userRepo.EmailExistsAsync(req.Email))
-                return BadRequest(new { message = "Email already exists" });
-
-            var success = await _userRepo.RegisterUserAsync(req);
-            return success
-                ? Ok(new { message = "User registered successfully" })
-                : StatusCode(500, new { message = "Failed to register user" });
+            try
+            {
+                var success = await _userService.SignupAsync(req);
+                if (success)
+                {
+                    return Ok(new { message = "User registered successfully" });
+                }
+                return BadRequest(new { message = "Failed to register user" });
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return Problem("An unexpected error occurred while signing up.");
+            }
         }
 
-
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginRequest model)
+        public async Task<IActionResult> Login([FromBody] LoginRequestDto req)
         {
-            var user = await _userRepo.GetUserByEmailAsync(model.Email);
-            if (user == null || !BCrypt.Net.BCrypt.Verify(model.Password, user.Enc_Password))
+            var userDto = await _userService.LoginAsync(req);
+            if (userDto == null)
                 return Unauthorized(new { message = "Invalid credentials" });
 
             return Ok(new
             {
-                userId = user.User_Id,
-                firstName = user.First_Name,
-                role = user.Role,
-                profilePicture = user.Profile_Picture
+                userId = userDto.UserId,
+                firstName = userDto.FirstName,
+                role = userDto.Role,
+                profilePicture = userDto.ProfilePicture
             });
         }
 
         [HttpGet("list")]
         public async Task<IActionResult> GetAllUsers()
         {
-            var users = await _userRepo.GetAllUsersAsync();
+            var users = await _userService.GetAllUsersAsync();
             return Ok(users);
         }
 
@@ -61,7 +68,7 @@ namespace EventManagementAPI.Controllers
         {
             try
             {
-                var relativePath = await _userRepo.SaveProfilePictureAsync(file);
+                var relativePath = await _userService.SaveProfilePictureAsync(file);
                 return Ok(new { filePath = relativePath });
             }
             catch (Exception ex)
@@ -73,31 +80,57 @@ namespace EventManagementAPI.Controllers
         [HttpGet("{id}/events")]
         public async Task<IActionResult> GetEventsByUser(int id)
         {
-            var events = await _userRepo.GetEventsByUserAsync(id);
-            return Ok(events);
+            try
+            {
+                var events = await _userService.GetEventsByUserAsync(id);
+                return Ok(events);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
 
         [HttpGet("{id}/events/upcoming")]
         public async Task<IActionResult> GetUpcomingEvents(int id)
         {
-            var events = await _userRepo.GetUpcomingEventsAsync(id);
-            return Ok(events);
+            try
+            {
+                var events = await _userService.GetUpcomingEventsAsync(id);
+                return Ok(events);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
 
         [HttpGet("{id}/events/past")]
         public async Task<IActionResult> GetPastEvents(int id)
         {
-            var events = await _userRepo.GetPastEventsAsync(id);
-            return Ok(events);
+            try
+            {
+                var events = await _userService.GetPastEventsAsync(id);
+                return Ok(events);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
 
         [HttpGet("{id}/events/accepted")]
         public async Task<IActionResult> GetAcceptedEvents(int id)
         {
-            var events = await _userRepo.GetAcceptedEventsAsync(id);
-            return Ok(events);
+            try
+            {
+                var events = await _userService.GetAcceptedEventsAsync(id);
+                return Ok(events);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
-
-
     }
 }
