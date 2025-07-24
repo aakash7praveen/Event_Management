@@ -2,6 +2,7 @@
 using Azure.Core;
 using EventManagementAPI.Dtos.Requests;
 using EventManagementAPI.Dtos.Responses;
+using EventManagementAPI.Mapper;
 using EventManagementAPI.Models;
 using EventManagementAPI.Models.Requests;
 using EventManagementAPI.Repositories;
@@ -12,28 +13,28 @@ namespace EventManagementAPI.Services
     public class EventsService : IEventService
     {
         private readonly EventRepository _eventRepo;
-        private readonly IMapper _mapper;
-        public EventsService(EventRepository eventRepository, IMapper mapper)
+        private readonly EventMapper _mapper;
+        public EventsService(EventRepository eventRepository, EventMapper mapper)
         {
             _eventRepo = eventRepository;
             _mapper = mapper;
         }
         public async Task<int> CreateEvent(CreateEventRequestDto dto)
         {
-            var request = _mapper.Map<CreateEventRequest>(dto);
+            var request = _mapper.ConvertToCreateEventModel(dto);
             return await _eventRepo.CreateEventAsync(request);
         }
 
         public async Task<EventResponseDto?> GetEventById(int id)
         {
             var ev = await _eventRepo.GetEventByIdAsync(id);
-            return ev == null ? null : _mapper.Map<EventResponseDto>(ev);
+            return ev == null ? null : _mapper.ConvertToEventDto(ev);
         }
 
         public async Task<IEnumerable<EventResponseDto>> GetAllEvents()
         {
             var events = await _eventRepo.GetAllEventsAsync();
-            return _mapper.Map<IEnumerable<EventResponseDto>>(events);
+            return _mapper.ConvertToEventDtoList(events);
         }
 
         public async Task<bool> CancelEvent(int eventId)
@@ -44,18 +45,18 @@ namespace EventManagementAPI.Services
         public async Task<IEnumerable<EventResponseDto>> GetTodaysEvents()
         {
             var events = await _eventRepo.GetTodaysEventsAsync();
-            return _mapper.Map<IEnumerable<EventResponseDto>>(events);
+            return _mapper.ConvertToEventDtoList(events);
         }
 
         public async Task<bool> RSVPToEvent(RsvpRequestDto request)
         {
-            var rsvpModel = _mapper.Map<RsvpRequest>(request);
+            var rsvpModel = _mapper.ConvertToRsvpModel(request);
             return await _eventRepo.RSVPToEventAsync(rsvpModel);
         }
 
         public async Task<bool> UpdateEvent(UpdateEventRequestDto request)
         {
-            var requestModel = _mapper.Map<UpdateEventRequest>(request);
+            var requestModel = _mapper.ConvertToUpdateEventModel(request);
             return await _eventRepo.UpdateEventAsync(requestModel);
         }
 
@@ -67,13 +68,13 @@ namespace EventManagementAPI.Services
         public async Task<AdminDashboardMetricsDto> GetAdminMetrics()
         {
             var metrics = await _eventRepo.GetAdminMetricsAsync();
-            return _mapper.Map<AdminDashboardMetricsDto>(metrics);
+            return _mapper.ConvertToMetricsDto(metrics);
         }
 
         public async Task<IEnumerable<UserResponseDto>> GetUsersByEvent(int eventId)
         {
             var users = await _eventRepo.GetUsersByEventAsync(eventId);
-            return _mapper.Map<IEnumerable<UserResponseDto>>(users);
+            return _mapper.ConvertToUserDtoList(users);
         }
 
         public async Task<bool> HasUserRsvped(int userId, int eventId)
@@ -84,25 +85,25 @@ namespace EventManagementAPI.Services
         public async Task<IEnumerable<CategoryCountDto>> GetEventCountByCategory()
         {
             var data = await _eventRepo.GetEventCountByCategoryAsync();
-            return _mapper.Map<IEnumerable<CategoryCountDto>>(data);
+            return _mapper.ConvertToCategoryDtoList(data);
         }
 
         public async Task<IEnumerable<DailyEventCountDto>> GetEventCountPerDay()
         {
             var data = await _eventRepo.GetEventCountPerDayAsync();
-            return _mapper.Map<IEnumerable<DailyEventCountDto>>(data);
+            return _mapper.ConvertToDailyCountDtoList(data);
         }
 
         public async Task<IEnumerable<TopVenueDto>> GetTopVenues()
         {
             var data = await _eventRepo.GetTopVenuesAsync();
-            return _mapper.Map<IEnumerable<TopVenueDto>>(data);
+            return _mapper.ConvertToTopVenueDtoList(data);
         }
 
         public async Task<IEnumerable<RsvpCountDto>> GetRsvpCountPerEvent()
         {
             var data = await _eventRepo.GetRsvpCountPerEventAsync();
-            return _mapper.Map<IEnumerable<RsvpCountDto>>(data);
+            return _mapper.ConvertToRsvpCountDtoList(data);
         }
     }
 }

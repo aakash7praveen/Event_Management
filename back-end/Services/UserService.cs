@@ -2,6 +2,7 @@
 using EventManagementAPI.Dtos.Requests;
 using EventManagementAPI.Dtos.Responses;
 using EventManagementAPI.DTOs;
+using EventManagementAPI.Mapper;
 using EventManagementAPI.Models;
 using EventManagementAPI.Models.Requests;
 using EventManagementAPI.Repositories;
@@ -12,9 +13,8 @@ namespace EventManagementAPI.Services
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepo;
-        private readonly IMapper _mapper;
-
-        public UserService(IUserRepository userRepo, IMapper mapper)
+        private readonly UserMapper _mapper;
+        public UserService(IUserRepository userRepo,UserMapper mapper)
         {
             _userRepo = userRepo;
             _mapper = mapper;
@@ -29,7 +29,7 @@ namespace EventManagementAPI.Services
             if (emailExists)
                 throw new ArgumentException("Email already exists");
 
-            var userModel = _mapper.Map<SignupRequest>(req);
+            var userModel = _mapper.ConvertToSignUpModel(req);
             return await _userRepo.RegisterUserAsync(userModel);
         }
 
@@ -39,12 +39,12 @@ namespace EventManagementAPI.Services
             if (user == null || !BCrypt.Net.BCrypt.Verify(req.Password, user.Enc_Password))
                 return null;
 
-            return _mapper.Map<UserResponseDto>(user);
+            return _mapper.ConvertToUserDto(user);
         }
 
         public async Task<bool> RegisterUserAsync(SignupRequestDto req)
         {
-            var request = _mapper.Map<SignupRequest>(req);
+            var request = _mapper.ConvertToSignUpModel(req);
             return await _userRepo.RegisterUserAsync(request);
         }
 
@@ -56,13 +56,13 @@ namespace EventManagementAPI.Services
         public async Task<UserResponseDto?> GetUserByEmailAsync(string email)
         {
             var user = await _userRepo.GetUserByEmailAsync(email);
-            return user == null ? null : _mapper.Map<UserResponseDto>(user);
+            return user == null ? null : _mapper.ConvertToUserDto(user);
         }
 
         public async Task<IEnumerable<UserResponseDto>> GetAllUsersAsync()
         {
             var users = await _userRepo.GetAllUsersAsync();
-            return _mapper.Map<IEnumerable<UserResponseDto>>(users);
+            return _mapper.ConvertToUserDto(users);
         }
 
         public async Task<string> SaveProfilePictureAsync(IFormFile file)
@@ -73,25 +73,25 @@ namespace EventManagementAPI.Services
         public async Task<IEnumerable<EventResponseDto>> GetEventsByUserAsync(int userId)
         {
             var events = await _userRepo.GetEventsByUserAsync(userId);
-            return _mapper.Map<IEnumerable<EventResponseDto>>(events);
+            return _mapper.ConvertToEventDtoList(events);
         }
 
         public async Task<IEnumerable<EventResponseDto>> GetUpcomingEventsAsync(int userId)
         {
             var events = await _userRepo.GetUpcomingEventsAsync(userId);
-            return _mapper.Map<IEnumerable<EventResponseDto>>(events);
+            return _mapper.ConvertToEventDtoList(events);
         }
 
         public async Task<IEnumerable<EventResponseDto>> GetPastEventsAsync(int userId)
         {
             var events = await _userRepo.GetPastEventsAsync(userId);
-            return _mapper.Map<IEnumerable<EventResponseDto>>(events);
+            return _mapper.ConvertToEventDtoList(events);
         }
 
         public async Task<IEnumerable<EventResponseDto>> GetAcceptedEventsAsync(int userId)
         {
             var events = await _userRepo.GetAcceptedEventsAsync(userId);
-            return _mapper.Map<IEnumerable<EventResponseDto>>(events);
+            return _mapper.ConvertToEventDtoList(events);
         }
     }
 }

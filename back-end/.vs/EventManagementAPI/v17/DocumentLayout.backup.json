@@ -1,106 +1,118 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\",
+  "WorkspaceRootPath": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\dtos\\responses\\userresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\responses\\userresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\dtos\\requests\\signuprequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\requests\\signuprequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\dtos\\requests\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\requests\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\dtos\\requests\\admindashboardmetricsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\requests\\admindashboardmetricsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\dtos\\requests\\topvenuedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\requests\\topvenuedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\dtos\\requests\\rsvprequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\requests\\rsvprequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\dtos\\requests\\dailyeventcountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\requests\\dailyeventcountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\dtos\\requests\\createeventrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\requests\\createeventrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\dtos\\requests\\categorycountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\requests\\categorycountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\models\\requests\\rsvprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:models\\requests\\rsvprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\services\\eventsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\services\\eventsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:services\\eventsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\models\\requests\\createeventrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:models\\requests\\createeventrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\dtos\\responses\\eventresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\responses\\eventresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\repositories\\interfaces\\ieventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:repositories\\interfaces\\ieventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\mapper\\eventmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:mapper\\eventmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\repositories\\eventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:repositories\\eventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\services\\ieventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:services\\ieventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\dtos\\requests\\updateeventrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\requests\\updateeventrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\dtos\\requests\\rsvpcountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\dtos\\requests\\rsvpcountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\requests\\rsvpcountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\onedrive - h\u0026r block ltd\\documents\\event_management\\back-end\\eventmanagementapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\dtos\\requests\\topvenuedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\requests\\topvenuedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\mapper\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:mapper\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\services\\ieventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:services\\ieventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\eventmanagementapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:eventmanagementapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\dtos\\responses\\userresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\responses\\userresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\dtos\\requests\\signuprequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\requests\\signuprequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\dtos\\requests\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\requests\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\dtos\\requests\\admindashboardmetricsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\requests\\admindashboardmetricsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\dtos\\requests\\rsvprequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\requests\\rsvprequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\dtos\\requests\\dailyeventcountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\requests\\dailyeventcountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\dtos\\requests\\createeventrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\requests\\createeventrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\dtos\\requests\\categorycountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\requests\\categorycountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\models\\requests\\rsvprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:models\\requests\\rsvprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\models\\requests\\createeventrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:models\\requests\\createeventrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\dtos\\responses\\eventresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\responses\\eventresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\repositories\\interfaces\\ieventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:repositories\\interfaces\\ieventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\repositories\\eventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:repositories\\eventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|c:\\users\\aakash praveen\\desktop\\event_management\\back-end\\dtos\\requests\\updateeventrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B18827EA-C7F4-43E4-8019-8D5EF4AF9008}|EventManagementAPI.csproj|solutionrelative:dtos\\requests\\updateeventrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -110,119 +122,80 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAgwDgAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "EventMapper.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Mapper\\EventMapper.cs",
+              "RelativeDocumentMoniker": "Mapper\\EventMapper.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Mapper\\EventMapper.cs",
+              "RelativeToolTip": "Mapper\\EventMapper.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAuwFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T11:09:02.928Z",
+              "WhenOpened": "2025-07-24T18:06:30.981Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T17:33:44.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserMapper.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Mapper\\UserMapper.cs",
+              "RelativeDocumentMoniker": "Mapper\\UserMapper.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Mapper\\UserMapper.cs",
+              "RelativeToolTip": "Mapper\\UserMapper.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAwEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T17:22:20.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Services\\UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Services\\UserService.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Services\\UserService.cs",
               "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAUwDYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwEAAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-24T11:14:09.23Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginRequestDto.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\LoginRequestDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\Requests\\LoginRequestDto.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\LoginRequestDto.cs",
-              "RelativeToolTip": "Dtos\\Requests\\LoginRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T05:30:38.978Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserResponseDto.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Responses\\UserResponseDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\Responses\\UserResponseDto.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Responses\\UserResponseDto.cs",
-              "RelativeToolTip": "Dtos\\Responses\\UserResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T07:19:21.058Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SignupRequestDto.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\SignupRequestDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\Requests\\SignupRequestDto.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\SignupRequestDto.cs",
-              "RelativeToolTip": "Dtos\\Requests\\SignupRequestDto.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAgwAQAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T05:31:31.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EventsController.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Controllers\\EventsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\EventsController.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Controllers\\EventsController.cs",
-              "RelativeToolTip": "Controllers\\EventsController.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowEMAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T04:24:35.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Services\\IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Services\\IUserService.cs",
               "RelativeDocumentMoniker": "Services\\IUserService.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Services\\IUserService.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Services\\IUserService.cs",
               "RelativeToolTip": "Services\\IUserService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAUwAoAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-24T11:13:45.122Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AdminDashboardMetricsDto.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\AdminDashboardMetricsDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\Requests\\AdminDashboardMetricsDto.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\AdminDashboardMetricsDto.cs",
-              "RelativeToolTip": "Dtos\\Requests\\AdminDashboardMetricsDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T05:32:24.503Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "TopVenueDto.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\TopVenueDto.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\TopVenueDto.cs",
               "RelativeDocumentMoniker": "Dtos\\Requests\\TopVenueDto.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\TopVenueDto.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\TopVenueDto.cs",
               "RelativeToolTip": "Dtos\\Requests\\TopVenueDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -231,193 +204,75 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RsvpRequestDto.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\RsvpRequestDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\Requests\\RsvpRequestDto.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\RsvpRequestDto.cs",
-              "RelativeToolTip": "Dtos\\Requests\\RsvpRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T05:31:10.284Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
               "Title": "DailyEventCountDto.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\DailyEventCountDto.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\DailyEventCountDto.cs",
               "RelativeDocumentMoniker": "Dtos\\Requests\\DailyEventCountDto.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\DailyEventCountDto.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\DailyEventCountDto.cs",
               "RelativeToolTip": "Dtos\\Requests\\DailyEventCountDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T07:31:50.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T07:31:50.238Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CreateEventRequestDto.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\CreateEventRequestDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\Requests\\CreateEventRequestDto.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\CreateEventRequestDto.cs",
-              "RelativeToolTip": "Dtos\\Requests\\CreateEventRequestDto.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAqwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T04:34:03.85Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CategoryCountDto.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\CategoryCountDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\Requests\\CategoryCountDto.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\CategoryCountDto.cs",
-              "RelativeToolTip": "Dtos\\Requests\\CategoryCountDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T07:30:58.617Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "RsvpRequest.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Models\\Requests\\RsvpRequest.cs",
-              "RelativeDocumentMoniker": "Models\\Requests\\RsvpRequest.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Models\\Requests\\RsvpRequest.cs",
-              "RelativeToolTip": "Models\\Requests\\RsvpRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T05:03:30.812Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "MappingProfile.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\MappingProfile.cs",
-              "RelativeToolTip": "MappingProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T05:33:20.477Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "EventResponseDto.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Responses\\EventResponseDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\Responses\\EventResponseDto.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Responses\\EventResponseDto.cs",
-              "RelativeToolTip": "Dtos\\Responses\\EventResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T06:44:21.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Program.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAhwCQAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-24T06:52:53.585Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "EventsService.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Services\\EventsService.cs",
-              "RelativeDocumentMoniker": "Services\\EventsService.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Services\\EventsService.cs",
-              "RelativeToolTip": "Services\\EventsService.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAAwGwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAUwIgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T04:32:35.055Z",
+              "WhenOpened": "2025-07-24T11:09:02.928Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CreateEventRequest.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Models\\Requests\\CreateEventRequest.cs",
-              "RelativeDocumentMoniker": "Models\\Requests\\CreateEventRequest.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Models\\Requests\\CreateEventRequest.cs",
-              "RelativeToolTip": "Models\\Requests\\CreateEventRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T04:25:57.79Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "IEventRepository.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Repositories\\Interfaces\\IEventRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IEventRepository.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Repositories\\Interfaces\\IEventRepository.cs",
-              "RelativeToolTip": "Repositories\\Interfaces\\IEventRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T09:54:04.122Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "EventRepository.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Repositories\\EventRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\EventRepository.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Repositories\\EventRepository.cs",
-              "RelativeToolTip": "Repositories\\EventRepository.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAswGAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T04:28:12.262Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 8,
               "Title": "IEventService.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Services\\IEventService.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Services\\IEventService.cs",
               "RelativeDocumentMoniker": "Services\\IEventService.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Services\\IEventService.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Services\\IEventService.cs",
               "RelativeToolTip": "Services\\IEventService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAgwA0AAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA1wA0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-24T06:56:22.933Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "UpdateEventRequestDto.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\UpdateEventRequestDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\Requests\\UpdateEventRequestDto.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\UpdateEventRequestDto.cs",
-              "RelativeToolTip": "Dtos\\Requests\\UpdateEventRequestDto.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAYwCEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "EventsService.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Services\\EventsService.cs",
+              "RelativeDocumentMoniker": "Services\\EventsService.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Services\\EventsService.cs",
+              "RelativeToolTip": "Services\\EventsService.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAUwGkAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T05:31:57.07Z",
+              "WhenOpened": "2025-07-24T04:32:35.055Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 5,
               "Title": "RsvpCountDto.cs",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\RsvpCountDto.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\RsvpCountDto.cs",
               "RelativeDocumentMoniker": "Dtos\\Requests\\RsvpCountDto.cs",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\Dtos\\Requests\\RsvpCountDto.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\RsvpCountDto.cs",
               "RelativeToolTip": "Dtos\\Requests\\RsvpCountDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -426,16 +281,197 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "EventManagementAPI",
-              "DocumentMoniker": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\EventManagementAPI.csproj",
+              "DocumentIndex": 2,
+              "Title": "EventsController.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Controllers\\EventsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EventsController.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Controllers\\EventsController.cs",
+              "RelativeToolTip": "Controllers\\EventsController.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAswEMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T04:24:35.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RsvpRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\RsvpRequestDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Requests\\RsvpRequestDto.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\RsvpRequestDto.cs",
+              "RelativeToolTip": "Dtos\\Requests\\RsvpRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T05:31:10.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AdminDashboardMetricsDto.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\AdminDashboardMetricsDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Requests\\AdminDashboardMetricsDto.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\AdminDashboardMetricsDto.cs",
+              "RelativeToolTip": "Dtos\\Requests\\AdminDashboardMetricsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T05:32:24.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SignupRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\SignupRequestDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Requests\\SignupRequestDto.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\SignupRequestDto.cs",
+              "RelativeToolTip": "Dtos\\Requests\\SignupRequestDto.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwAQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T05:31:31.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Responses\\UserResponseDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Responses\\UserResponseDto.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Responses\\UserResponseDto.cs",
+              "RelativeToolTip": "Dtos\\Responses\\UserResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T07:19:21.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LoginRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\LoginRequestDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Requests\\LoginRequestDto.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\LoginRequestDto.cs",
+              "RelativeToolTip": "Dtos\\Requests\\LoginRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T05:30:38.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EventManagementAPI.csproj",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\EventManagementAPI.csproj",
               "RelativeDocumentMoniker": "EventManagementAPI.csproj",
-              "ToolTip": "C:\\OneDrive - H\u0026R BLOCK LTD\\Documents\\Event_Management\\back-end\\EventManagementAPI.csproj",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\EventManagementAPI.csproj",
               "RelativeToolTip": "EventManagementAPI.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-07-24T04:31:34.967Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CreateEventRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\CreateEventRequestDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Requests\\CreateEventRequestDto.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\CreateEventRequestDto.cs",
+              "RelativeToolTip": "Dtos\\Requests\\CreateEventRequestDto.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAqwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T04:34:03.85Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CategoryCountDto.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\CategoryCountDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Requests\\CategoryCountDto.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\CategoryCountDto.cs",
+              "RelativeToolTip": "Dtos\\Requests\\CategoryCountDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T07:30:58.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "RsvpRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Models\\Requests\\RsvpRequest.cs",
+              "RelativeDocumentMoniker": "Models\\Requests\\RsvpRequest.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Models\\Requests\\RsvpRequest.cs",
+              "RelativeToolTip": "Models\\Requests\\RsvpRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T05:03:30.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "MappingProfile.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\MappingProfile.cs",
+              "RelativeToolTip": "MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T05:33:20.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "EventResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Responses\\EventResponseDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Responses\\EventResponseDto.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Responses\\EventResponseDto.cs",
+              "RelativeToolTip": "Dtos\\Responses\\EventResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T06:44:21.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CreateEventRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Models\\Requests\\CreateEventRequest.cs",
+              "RelativeDocumentMoniker": "Models\\Requests\\CreateEventRequest.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Models\\Requests\\CreateEventRequest.cs",
+              "RelativeToolTip": "Models\\Requests\\CreateEventRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T04:25:57.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IEventRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Repositories\\Interfaces\\IEventRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IEventRepository.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Repositories\\Interfaces\\IEventRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IEventRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T09:54:04.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "EventRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Repositories\\EventRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\EventRepository.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Repositories\\EventRepository.cs",
+              "RelativeToolTip": "Repositories\\EventRepository.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAswGAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T04:28:12.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UpdateEventRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\UpdateEventRequestDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Requests\\UpdateEventRequestDto.cs",
+              "ToolTip": "C:\\Users\\Aakash Praveen\\Desktop\\Event_Management\\back-end\\Dtos\\Requests\\UpdateEventRequestDto.cs",
+              "RelativeToolTip": "Dtos\\Requests\\UpdateEventRequestDto.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T05:31:57.07Z"
             }
           ]
         }
