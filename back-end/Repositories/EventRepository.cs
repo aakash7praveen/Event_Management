@@ -1,51 +1,58 @@
 ﻿using Dapper;
 using EventManagementAPI.Helpers;
-using EventManagementAPI.Repositories.Interfaces;
 using EventManagementAPI.Models;
-using EventManagementAPI.Models.Requests;
 using EventManagementAPI.Models.Analytics;
+using EventManagementAPI.Models.Requests;
+using EventManagementAPI.Repositories.Generics;
+using EventManagementAPI.Repositories.Interfaces;
 
 namespace EventManagementAPI.Repositories
 {
-    public class EventRepository : IEventRepository
+    public class EventRepository : GenericRepository<Event>, IEventRepository
     {
-        private readonly DbHelper _db;
+        private readonly DbHelper _dbHelper;
 
-        public EventRepository(DbHelper db)
+        public EventRepository(DbHelper dbHelper) : base(dbHelper)
         {
-            _db = db;
+            _dbHelper = dbHelper;
         }
 
         public async Task<int> CreateEventAsync(CreateEventRequest request)
         {
-            // create dto and map 
-            // return the id of the newly created event
+            var eventEntity = new Event
+            {
+                Title = request.Title,
+                Description = request.Description,
+                StartTime = request.StartDateTime,
+                EndTime = request.EndDateTime,
+                Location = request.Location,
+                Category = request.Category,
+                Created_By = request.CreatedBy,
+                MaxAttendees = request.MaxAttendees,
+                Delete_Ind = 0 //check in db
+            };
             var sql = @"INSERT INTO [event] (title, description, start_dt, end_dt, location, category, created_by, max_attendees, delete_ind)
-                        VALUES (@Title, @Description, @StartDateTime, @EndDateTime, @Location, @Category, @CreatedBy, @MaxAttendees, 0)";
-            return await _db.ExecuteAsync(sql, request);
+                    VALUES (@Title, @Description, @StartDateTime, @EndDateTime, @Location, @Category, @CreatedBy, @MaxAttendees, 0)";
+            return await AddAsync(sql, eventEntity); 
         }
 
         public async Task<IEnumerable<Event>> GetAllEventsAsync()
         {
             var sql = @"SELECT event_id AS Id,
-            title AS Title,
-            description AS Description,
-            start_dt AS StartTime,
-            end_dt AS EndTime,
-            location AS Location,
-            category AS Category,
-            created_by AS Created_By,
-            created_ts AS Created_Ts,
-            updated_ts AS Updated_Ts,
-            max_attendees AS MaxAttendees,
-            delete_ind AS Delete_Ind FROM [event] WHERE delete_ind = 0 ORDER BY start_dt";
-            return await _db.QueryAsync<Event>(sql);
+                    title AS Title, description AS Description, start_dt AS StartTime,
+                    end_dt AS EndTime, location AS Location, category AS Category,
+                    created_by AS Created_By, created_ts AS Created_Ts,
+                    updated_ts AS Updated_Ts, max_attendees AS MaxAttendees,
+                    delete_ind AS Delete_Ind
+                    FROM [event] WHERE delete_ind = 0 ORDER BY start_dt";
+
+            return await GetAllAsync(sql); 
         }
 
         public async Task<int> CancelEventAsync(int eventId)
         {
             var sql = "UPDATE [event] SET delete_ind = 1, updated_ts = GETDATE() WHERE event_id = @EventId";
-            return await _db.ExecuteAsync(sql, new { EventId = eventId });
+            return await DeleteAsync(sql, new { EventId = eventId }); 
         }
 
 
@@ -71,22 +78,17 @@ namespace EventManagementAPI.Repositories
             return await _db.QueryAsync<Event>(sql);
         }
 
-
         public async Task<Event?> GetEventByIdAsync(int id)
         {
             var sql = @"SELECT event_id AS Id,
-            title AS Title,
-            description AS Description,
-            start_dt AS StartTime,
-            end_dt AS EndTime,
-            location AS Location,
-            category AS Category,
-            created_by AS Created_By,
-            created_ts AS Created_Ts,
-            updated_ts AS Updated_Ts,
-            max_attendees AS MaxAttendees,
-            delete_ind AS Delete_Ind FROM [event] WHERE event_id = @Id";
-            return await _db.QuerySingleAsync<Event>(sql, new { Id = id });
+                    title AS Title, description AS Description, start_dt AS StartTime,
+                    end_dt AS EndTime, location AS Location, category AS Category,
+                    created_by AS Created_By, created_ts AS Created_Ts,
+                    updated_ts AS Updated_Ts, max_attendees AS MaxAttendees,
+                    delete_ind AS Delete_Ind
+                    FROM [event] WHERE event_id = @Id";
+
+            return await GetByIdAsync(sql, new { Id = id }); 
         }
 
         public async Task<bool> RSVPToEventAsync(RsvpRequest request)
@@ -124,18 +126,24 @@ namespace EventManagementAPI.Repositories
 
         public async Task<bool> UpdateEventAsync(UpdateEventRequest request)
         {
+            var eventEntity = new Event
+            {
+                Id = request.EventId,
+                Title = request.Title,
+                Description = request.Description,
+                StartTime = request.StartDt,
+                EndTime = request.EndDt,
+                Location = request.Location,
+                Category = request.Category,
+                MaxAttendees = request.MaxAttendees
+            };
             var sql = @"UPDATE [event]
-                SET title = @Title,
-                    description = @Description,
-                    start_dt = @StartDt,
-                    end_dt = @EndDt,
-                    location = @Location,
-                    category = @Category,
-                    max_attendees = @MaxAttendees,
-                    updated_ts = GETDATE()
-                WHERE event_id = @EventId AND delete_ind = 0";
+                    SET title = @Title, description = @Description, start_dt = @StartDt,
+                        end_dt = @EndDt, location = @Location, category = @Category,
+                        max_attendees = @MaxAttendees, updated_ts = GETDATE()
+                    WHERE event_id = @EventId AND delete_ind = 0";
 
-            return await _db.ExecuteAsync(sql, request) > 0;
+            return await UpdateAsync(sql, eventEntity) > 0; 
         }
 
         public async Task<bool> HasUserRsvpedAsync(int userId, int eventId)

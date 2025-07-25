@@ -58,24 +58,41 @@ namespace EventManagementAPI.Mapper
             return _mapper.Map<AdminDashboardMetricsDto>(model);
         }
 
-        public IEnumerable<CategoryCountDto> ConvertToCategoryDtoList(IEnumerable<CategoryCount> categories)
+        public IEnumerable<TopVenueDto> ConvertToTopVenueDtoList(IEnumerable<VenueEventCount> data)
         {
-            return _mapper.Map<IEnumerable<CategoryCountDto>>(categories);
+            return data.Select(v => new TopVenueDto
+            {
+                Location = v.Venue,
+                EventCount = v.Count
+            });
+        }
+
+        public IEnumerable<RsvpCountDto> ConvertToRsvpCountDtoList(IEnumerable<EventRsvpCount> data)
+        {
+            return data.Select(e => new RsvpCountDto
+            {
+                EventTitle = e.Title,
+                RsvpCount = e.RsvpCount
+            });
+        }
+
+        public IEnumerable<CategoryCountDto> ConvertToCategoryDtoList(IEnumerable<EventCategoryCount> data)
+        {
+            return data.Select(c => new CategoryCountDto
+            {
+                Category = c.Category,
+                EventCount = c.Count
+            });
         }
 
         public IEnumerable<DailyEventCountDto> ConvertToDailyCountDtoList(IEnumerable<DailyEventCount> data)
         {
-            return _mapper.Map<IEnumerable<DailyEventCountDto>>(data);
+            return data.Select(d => new DailyEventCountDto
+            {
+                Date = d.Date,
+                EventCount = d.Count
+            });
         }
 
-        public IEnumerable<TopVenueDto> ConvertToTopVenueDtoList(IEnumerable<TopVenue> venues)
-        {
-            return _mapper.Map<IEnumerable<TopVenueDto>>(venues);
-        }
-
-        public IEnumerable<RsvpCountDto> ConvertToRsvpCountDtoList(IEnumerable<RsvpCount> rsvps)
-        {
-            return _mapper.Map<IEnumerable<RsvpCountDto>>(rsvps);
-        }
     }
 }

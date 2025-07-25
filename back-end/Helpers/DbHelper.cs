@@ -16,6 +16,11 @@ namespace EventManagementAPI.Helpers
 
         private IDbConnection Connection => new SqlConnection(_connectionString);
 
+        public IDbConnection CreateConnection()
+        {
+            return new SqlConnection(_connectionString);
+        }
+
         public async Task<IEnumerable<T>> QueryAsync<T>(string sql, object? parameters = null)
         {
             using var conn = Connection;

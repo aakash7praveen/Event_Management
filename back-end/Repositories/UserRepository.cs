@@ -3,14 +3,15 @@ using EventManagementAPI.Helpers;
 using EventManagementAPI.Models;
 using EventManagementAPI.Models.Requests;
 using EventManagementAPI.Repositories.Interfaces;
+using EventManagementAPI.Repositories.Generics;
 
 namespace EventManagementAPI.Repositories
 {
-    public class UserRepository : IUserRepository
+    public class UserRepository : GenericRepository<SystemUser>, IUserRepository
     {
         private readonly DbHelper _dbHelper;
 
-        public UserRepository(DbHelper dbHelper)
+        public UserRepository(DbHelper dbHelper) : base(dbHelper)
         {
             _dbHelper = dbHelper;
         }
@@ -48,23 +49,13 @@ namespace EventManagementAPI.Repositories
 
         public async Task<IEnumerable<SystemUser>> GetAllUsersAsync()
         {
-            var sql = @"
-            SELECT 
-            user_id AS User_Id,
-            first_name AS First_Name,
-            middle_name AS Middle_Name,
-            last_name AS Last_Name,
-            email AS Email,
-            phone_number AS Phone_Number,
-            profile_picture AS Profile_Picture,
-            role AS Role,
-            created_ts AS Created_Ts,
-            enc_password AS Enc_Password
-            FROM [user]
-            WHERE role = 0"; 
+            var sql = @"SELECT user_id AS User_Id, first_name AS First_Name, middle_name AS Middle_Name,
+                           last_name AS Last_Name, email AS Email, phone_number AS Phone_Number,
+                           profile_picture AS Profile_Picture, role AS Role, created_ts AS Created_Ts,
+                           enc_password AS Enc_Password
+                    FROM [user] WHERE role = 0";
 
-            var users = await _dbHelper.QueryAsync<SystemUser>(sql);
-            return users;
+            return await GetAllAsync(sql); 
         }
 
         public async Task<string> SaveProfilePictureAsync(IFormFile file)
@@ -89,8 +80,8 @@ namespace EventManagementAPI.Repositories
 
         public async Task<SystemUser?> GetUserByEmailAsync(string email)
         {
-            var sql = "SELECT * FROM [user] WHERE email = @Email";
-            return await _dbHelper.QuerySingleAsync<SystemUser>(sql, new { Email = email });
+            var sql = @"SELECT * FROM [user] WHERE email = @Email";
+            return await GetByIdAsync(sql, new { Email = email }); 
         }
 
         public async Task<IEnumerable<Event>> GetEventsByUserAsync(int userId)
